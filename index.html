@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Rohaib | Senior Full-Stack Engineer & AI Specialist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body class="dark-mode">
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Loading Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- Cursor Effects -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Theme Toggle -->
+  <div class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+  </div>
+
+  <!-- Language Toggle -->
+  <div class="language-toggle" id="languageToggle">
+    <span class="active">EN</span>
+    <span>FR</span>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <span>MR</span>
+        </a>
+        <div class="nav-links">
+          <a href="#about"><span>01.</span> About</a>
+          <a href="#experience"><span>02.</span> Experience</a>
+          <a href="#projects"><span>03.</span> Projects</a>
+          <a href="#skills"><span>04.</span> Skills</a>
+          <a href="#contact"><span>05.</span> Contact</a>
+        </div>
+        <div class="header-actions">
+          <a href="#" class="resume-button" id="resumeButton">
+            <i class="fas fa-file-pdf"></i> Resume
+          </a>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileMenuClose">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="mobile-menu-links">
+      <a href="#about"><span>01.</span> About</a>
+      <a href="#experience"><span>02.</span> Experience</a>
+      <a href="#projects"><span>03.</span> Projects</a>
+      <a href="#skills"><span>04.</span> Skills</a>
+      <a href="#contact"><span>05.</span> Contact</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <div class="mobile-social-links" id="mobileSocialLinks">
+        <!-- Social links populated from data.js -->
+      </div>
+      <a href="#" class="resume-button mobile-resume">
+        <i class="fas fa-file-pdf"></i> Download Resume
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div id="particles-js"></div>
+    <div class="hero-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="greeting">
+            <span class="wave-emoji">👋</span> Hi there, I'm
+          </p>
+          <h1 class="name">Muhammad Rohaib.</h1>
+          <h2 class="subtitle">I build <span class="typing-text" id="typingText"></span></h2>
+          <p class="description">
+            I'm a <span class="accent">full-stack engineer</span> and <span class="accent">AI specialist</span> focused on creating exceptional digital experiences. Currently leading development at <a href="#" target="_blank" class="company-link">Example Corp</a> while building innovative solutions.
+          </p>
+          <div class="cta-buttons">
+            <a href="#contact" class="cta-button primary">
+              <i class="fas fa-paper-plane"></i> Get In Touch
+            </a>
+            <a href="#projects" class="cta-button secondary">
+              <i class="fas fa-code"></i> View Projects
+            </a>
+            <a href="#" class="cta-button tertiary" id="viewResumeBtn">
+              <i class="fas fa-file-alt"></i> View Resume
+            </a>
+          </div>
+          <div class="hero-social-links" id="heroSocialLinks">
+            <!-- Social links populated from data.js -->
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-image-container">
+            <div class="profile-img-wrapper">
+              <img src="assets/profile.jpg" alt="Muhammad Rohaib" class="profile-img">
+            </div>
+            <div class="hero-image-badge">
+              <div class="badge-content">
+                <i class="fas fa-award"></i>
+                <span>5+ Years Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-down-indicator">
+      <span>Scroll Down</span>
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-number="01.">About Me</h2>
+        <div class="section-title-line"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            Hello! I'm Muhammad, a passionate software engineer with expertise in full-stack development and artificial intelligence. My journey in tech began when I built my first website at 16, and since then I've been obsessed with creating digital solutions that make an impact.
+          </p>
+          <p>
+            With over 5 years of professional experience, I've had the privilege to work with <a href="#" target="_blank">startups</a>, <a href="#" target="_blank">enterprises</a>, and <a href="#" target="_blank">digital agencies</a> across the globe. Currently, I'm leading a team of developers at <a href="#" target="_blank">Example Corp</a> where we're building next-generation web applications.
+          </p>
+          <p>
+            When I'm not coding, you can find me contributing to <a href="#" target="_blank">open-source projects</a>, writing technical articles, or mentoring aspiring developers through my <a href="#" target="_blank">YouTube channel</a> and <a href="#" target="_blank">online courses</a>.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-number" id="projectsCompleted">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" id="happyClients">0</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" id="coffeeCups">0</div>
+              <div class="stat-label">Cups of Coffee</div>
+            </div>
+          </div>
+        </div>
+        <div class="profile-image">
+          <div class="profile-image-container">
+            <div class="profile-img-wrapper">
+              <img src="assets/profile-about.jpg" alt="Profile" class="profile-img">
+            </div>
+            <div class="profile-image-badge">
+              <i class="fas fa-medal"></i>
+              <span>Top Rated Developer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-number="02.">Work Experience</h2>
+        <div class="section-title-line"></div>
+      </div>
+      <div class="experience-container">
+        <div class="experience-tabs" id="experienceTabs">
+          <!-- Experience tabs populated from data.js -->
+        </div>
+        <div class="tab-contents" id="tabContents">
+          <!-- Experience content populated from data.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-number="03.">Technical Skills</h2>
+        <div class="section-title-line"></div>
+      </div>
+      <div class="skills-container">
+        <div class="skills-categories" id="skillsCategories">
+          <!-- Skills categories populated from data.js -->
+        </div>
+        <div class="skills-visualization">
+          <div class="skills-radar-chart" id="skillsRadarChart">
+            <!-- Radar chart will be generated by JavaScript -->
+          </div>
+          <div class="skills-legend" id="skillsLegend">
+            <!-- Legend will be generated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-number="04.">Featured Projects</h2>
+        <div class="section-title-line"></div>
+      </div>
+      <div class="projects-header">
+        <h3>My Latest Work</h3>
+        <div class="projects-filter">
+          <button class="filter-button active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="web">Web</button>
+          <button class="filter-button" data-filter="mobile">Mobile</button>
+          <button class="filter-button" data-filter="ai">AI/ML</button>
+          <button class="filter-button" data-filter="design">Design</button>
+        </div>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Projects populated from data.js -->
+      </div>
+      <div class="view-more-projects">
+        <a href="#" class="cta-button outline">
+          <i class="fas fa-arrow-right"></i> View All Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-number="05.">Client Testimonials</h2>
+        <div class="section-title-line"></div>
+      </div>
+      <div class="testimonials-slider" id="testimonialsSlider">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <!-- Testimonials populated from data.js -->
+        </div>
+        <div class="slider-controls">
+          <button class="slider-prev" id="sliderPrev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-next" id="sliderNext">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-number="06.">Latest Articles</h2>
+        <div class="section-title-line"></div>
+      </div>
+      <div class="blog-grid" id="blogGrid">
+        <!-- Blog posts populated from data.js -->
+      </div>
+      <div class="view-more-blog">
+        <a href="#" class="cta-button outline">
+          <i class="fas fa-book-open"></i> Read More Articles
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-number="07.">Get In Touch</h2>
+        <div class="section-title-line"></div>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <p class="contact-title">Let's Connect</p>
+          <h2 class="contact-heading">Have a project in mind?</h2>
+          <p class="contact-description">
+            I'm currently available for freelance work and full-time positions. If you have a project that needs creative expertise, or just want to say hello, feel free to reach out!
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email Me</h4>
+                <a href="mailto:hello@example.com">hello@example.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Call Me</h4>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Location</h4>
+                <p>San Francisco, CA</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-social-links" id="contactSocialLinks">
+            <!-- Social links populated from data.js -->
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea id="message" name="message" class="form-textarea" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-message" id="formMessage"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wave">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <span>Muhammad Rohaib</span>
+          </a>
+          <p class="footer-description">
+            Full-stack engineer & AI specialist creating exceptional digital experiences.
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Resume</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Tutorials</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Connect</h4>
+            <ul id="footerSocialLinks">
+              <!-- Social links populated from data.js -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="year"></span> Muhammad Rohaib. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
